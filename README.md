@@ -1,10 +1,10 @@
 Yii2 Excel Export
 =================
 
-[![Latest Stable Version](https://poser.pugx.org/codemix/yii2-excelexport/v/stable)](https://packagist.org/packages/codemix/yii2-excelexport)
-[![Total Downloads](https://poser.pugx.org/codemix/yii2-excelexport/downloads)](https://packagist.org/packages/codemix/yii2-excelexport)
-[![Latest Unstable Version](https://poser.pugx.org/codemix/yii2-excelexport/v/unstable)](https://packagist.org/packages/codemix/yii2-excelexport)
-[![License](https://poser.pugx.org/codemix/yii2-excelexport/license)](https://packagist.org/packages/codemix/yii2-excelexport)
+[![Latest Stable Version](https://poser.pugx.org/ronansinuca/yii2-excelexport/v/stable)](https://packagist.org/packages/ronansinuca/yii2-excelexport)
+[![Total Downloads](https://poser.pugx.org/ronansinuca/yii2-excelexport/downloads)](https://packagist.org/packages/ronansinuca/yii2-excelexport)
+[![Latest Unstable Version](https://poser.pugx.org/ronansinuca/yii2-excelexport/v/unstable)](https://packagist.org/packages/ronansinuca/yii2-excelexport)
+[![License](https://poser.pugx.org/ronansinuca/yii2-excelexport/license)](https://packagist.org/packages/ronansinuca/yii2-excelexport)
 
 > **Note:** The minimum requirement since 2.6.0 is Yii 2.0.13. The latest
 > version for older Yii releases is 2.5.0.
@@ -29,10 +29,10 @@ Install the package with [composer](http://getcomposer.org):
 ```php
 <?php
 $file = \Yii::createObject([
-    'class' => 'codemix\excelexport\ExcelFile',
+    'class' => 'ronansinuca\excelexport\ExcelFile',
     'sheets' => [
         'Users' => [
-            'class' => 'codemix\excelexport\ActiveExcelSheet',
+            'class' => 'ronansinuca\excelexport\ActiveExcelSheet',
             'query' => User::find(),
         ]
     ]
@@ -114,14 +114,14 @@ Property | Description
 ```php
 <?php
 $file = \Yii::createObject([
-    'class' => 'codemix\excelexport\ExcelFile',
+    'class' => 'ronansinuca\excelexport\ExcelFile',
 
     'writerClass' => '\PhpOffice\PhpSpreadsheet\Writer\Xls', // Override default of `\PhpOffice\PhpSpreadsheet\Writer\Xlsx`
 
     'sheets' => [
 
         'Active Users' => [
-            'class' => 'codemix\excelexport\ActiveExcelSheet',
+            'class' => 'ronansinuca\excelexport\ActiveExcelSheet',
             'query' => User::find()->where(['active' => true]),
 
             // If not specified, all attributes from `User::attributes()` are used
@@ -150,7 +150,7 @@ $file->send('demo.xlsx');
 ```php
 <?php
 $file = \Yii::createObject([
-    'class' => 'codemix\excelexport\ExcelFile',
+    'class' => 'ronansinuca\excelexport\ExcelFile',
     'sheets' => [
 
         'Result per Country' => [   // Name of the excel sheet
@@ -196,7 +196,7 @@ $file->saveAs('/tmp/export.xlsx');
 ```php
 <?php
 $file = \Yii::createObject([
-    'class' => 'codemix\excelexport\ExcelFile',
+    'class' => 'ronansinuca\excelexport\ExcelFile',
     'sheets' => [
 
         'Users' => [
@@ -220,10 +220,10 @@ property of a sheet. For details on the accepted styling format please consult t
 ```php
 <?php
 $file = \Yii::createObject([
-    'class' => 'codemix\excelexport\ExcelFile',
+    'class' => 'ronansinuca\excelexport\ExcelFile',
     'sheets' => [
         'Users' => [
-            'class' => 'codemix\excelexport\ActiveExcelSheet',
+            'class' => 'ronansinuca\excelexport\ActiveExcelSheet',
             'query' => User::find(),
             'styles' => [
                 'A1:Z1000' => [
@@ -265,10 +265,10 @@ Alternatively you can also use the callback feature from our `ExcelSheet`:
 ```php
 <?php
 $file = \Yii::createObject([
-    'class' => 'codemix\excelexport\ExcelFile',
+    'class' => 'ronansinuca\excelexport\ExcelFile',
     'sheets' => [
         'Users' => [
-            'class' => 'codemix\excelexport\ActiveExcelSheet',
+            'class' => 'ronansinuca\excelexport\ActiveExcelSheet',
             'query' => User::find(),
             'callbacks' => [
                 // $cell is a \PhpOffice\PhpSpreadsheet\Cell object
@@ -310,10 +310,10 @@ Since version 2.5.0 there are new events which make it easier to further modify 
 ```php
 <?php
 $file = \Yii::createObject([
-    'class' => 'codemix\excelexport\ExcelFile',
+    'class' => 'ronansinuca\excelexport\ExcelFile',
     'sheets' => [
         'Users' => [
-            'class' => 'codemix\excelexport\ActiveExcelSheet',
+            'class' => 'ronansinuca\excelexport\ActiveExcelSheet',
             'query' => User::find(),
             'startRow' => 3,
             'on beforeRender' => function ($event) {
