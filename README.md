@@ -22,7 +22,7 @@ To write the Excel file, we use the excellent [PHPSpreadsheet](https://github.co
 
 Install the package with [composer](http://getcomposer.org):
 
-    composer require codemix/yii2-excelexport
+    composer require ronansinuca/yii2-excelexport
 
 ## Quickstart example
 
