@@ -15,7 +15,7 @@
         "php": ">=7.4",
         "yiisoft/yii2": "~2.0.13",
         "mikehaertl/php-tmpfile": "^1.3",
-        "phpoffice/phpspreadsheet": "^5.0"
+        "phpoffice/phpspreadsheet": "^2.0"
     },
     "autoload": {
         "psr-4": {
