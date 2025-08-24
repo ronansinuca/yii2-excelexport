@@ -4,7 +4,7 @@
     "keywords": ["yii2", "excel", "export"],
     "type": "yii2-extension",
     "license": "MIT",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Michael Härtl",
